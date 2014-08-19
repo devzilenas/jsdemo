@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="sierpinski.js"></script>
+		<title>Sierpinski triangle</title>
+	</head>
+	<body onload="load()">
+		<canvas id="view" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			function defH() { return 100; }
+			function gCanvas() { return document.getElementById("view"); }
+			function draw(h) {
+				var triangle = new Triangle();
+				triangle.generate(h);
+				triangle.draw();
+			}
+			function process(f) {
+				var parsed = parseInt(f.n.value); 
+				var val    = isNaN(parsed) || parsed <= 0 ? defH() : parsed;
+				draw(val);
+			}
+			function load() {
+				document.forms.c.n.value = defH();
+				draw(defH());
+			}
+		</script>
+		<form id="c">
+			<input type="text" id="n" />
+			<input type="submit" value="Proceed" onclick="process(this.form);return false;" />
+		</form>
+		<p>2013 <a href="mailto:mzilenas@gmail.com">Marius Žilėnas</a></p>
+	</body>
+</html>
