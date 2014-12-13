@@ -3,5 +3,7 @@ JS demo
 
 Javascript demos
 ----------------
-1) Conway's Game of Life demo.
-2) Sierpinski triangle fractal demo.
+- Conway's Game of Life demo.
+![Life @ 8th iteration](life/8iterationlife.png)
+- Sierpinski triangle (▲) fractal demo.
+![Sierpinski triangle](sierpinski/128 sierpinski.png)
